@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center">Room Finder</h1>
+<form action="{{ url_for('room_finder.find') }}" method="post">
+    <div class="form-group">
+        <label for="classroom">Classroom:</label>
+        <input type="text" id="classroom" name="classroom" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="day_of_week">Day of the Week:</label>
+        <input type="text" id="day_of_week" name="day_of_week" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="time">Time (HH:MM):</label>
+        <input type="text" id="time" name="time" class="form-control" required>
+    </div>
+    <input type="submit" value="Find" class="btn btn-success">
+</form>
+<a href="{{ url_for('room_finder.upload') }}" class="btn btn-info mt-3">Upload Schedule</a>
+<a href="{{ url_for('room_finder.add') }}" class="btn btn-info mt-3">Add New Schedule</a>
+{% endblock %}

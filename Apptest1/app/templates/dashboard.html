@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center">Dashboard</h1>
+
+<div class="dashboard-overview">
+    <div class="widget">
+        <h2>Room Finder</h2>
+        <p>{{ room_summary }}</p>
+        <a href="{{ url_for('room_finder.room_finder') }}" class="btn btn-primary">Go to Room Finder</a>
+    </div>
+</div>
+
+{% endblock %}
