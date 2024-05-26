@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Empty Classroom Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Empty Classrooms</h1>
+        <form action="/find" method="post">
+            <label for="classroom">Classroom:</label>
+            <input type="text" id="classroom" name="classroom" required><br><br>
+            <label for="day_of_week">Day of the Week:</label>
+            <input type="text" id="day_of_week" name="day_of_week" required><br><br>
+            <label for="time">Time (HH:MM):</label>
+            <input type="text" id="time" name="time" required><br><br>
+            <input type="submit" value="Find">
+        </form>
+        <br>
+        <a href="/upload">Upload Schedule</a><br>
+        <a href="/add">Add New Schedule</a>
+    </div>
+</body>
+</html>

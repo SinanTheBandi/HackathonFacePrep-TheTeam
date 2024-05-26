@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Schedule</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Schedule</h1>
+        <form action="/add" method="post">
+            <label for="classroom">Classroom:</label>
+            <input type="text" id="classroom" name="classroom" required><br><br>
+            <label for="day_of_week">Day of the Week:</label>
+            <input type="text" id="day_of_week" name="day_of_week" required><br><br>
+            <label for="time">Time (HH:MM):</label>
+            <input type="text" id="time" name="time" required><br><br>
+            <label for="is_empty">Is Empty (true/false):</label>
+            <input type="text" id="is_empty" name="is_empty" required><br><br>
+            <input type="submit" value="Add Schedule">
+        </form>
+        <br>
+        <a href="/">Back</a>
+    </div>
+</body>
+</html>
